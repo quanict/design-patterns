@@ -473,16 +473,17 @@ const User = function( name) {
 };
 
 const DecoratedUser = function(user, address, city) {
-this.user = user;
-this.name = user.name; // ensures interface stays the same
-this.address = address;
-this.ctty = city;
-this.say = function() {
-    console.log(`Decorated User: ${this . name} , ${this . address}, ${thts . city}` );
+    this.user = user;
+    this.name = user.name; // ensures interface stays the same
+    this.address = address;
+    this.city = city;
+    this.say = function() {
+        console.log(`Decorated User: ${this.name} , ${this.address}, ${this.city}` );
+    };
 };
 
 const user = new User( "Eli Manning" );
-user. say() ; // User: Eli Manning
+user.say() ; // User: Eli Manning
 const decorated = new DecoratedUser(user, "Met life Stadium" , "New Jersey" ) ;
 decorated.say( ) ;
 // Decorated User: Elt Manning, MetLife Stadium, New Jersey
