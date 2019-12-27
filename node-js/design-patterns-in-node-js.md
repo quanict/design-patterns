@@ -519,10 +519,33 @@ Command pattern
 
 ## 10. Prototype Design Pattern
 
+## 11. Strategy
+
+> Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+
+![img-02]
+
+It allows a strategy (algorithm) to be swapped out at runtime by any strategy without the client realizing it.
+
+In Express, the Strategy pattern can be seen in the way Express supports various different template engines such as Pug, Mustache, EJS, swig, etc.. Take a look at [here](02) for the full list of supported engines
+
+```js
+import express from 'express';
+import exphbs from 'express-handlebars';
+...
+const app = express();
+app.engine('.html', exphbs({...}));
+app.engine('jade', require('jade').__express);
+//Select the strategy '.html'
+app.set('view engine', '.html');
+```
 
 ## Referenced
 --------------------
 
+[02]: https://github.com/expressjs/express/wiki?_ga=1.216495568.777274470.1463719254#template-engines
+
+[img-02]: images/strategy.png
 [img-01]: images/1_dWMuOSIJsuU27gZfuxJwRQ.png
 [01]: https://nodejs.org/api/events.html
 [source]: https://blog.logrocket.com/design-patterns-in-node-js/
@@ -530,3 +553,5 @@ Command pattern
 [source]: https://blog.risingstack.com/fundamental-node-js-design-patterns/
 [source]: https://hub.packtpub.com/introduction-nodejs-design-patterns/
 [source]: http://expressjs.com/en/guide/using-middleware.html#using-middleware
+[source]: https://dzone.com/articles/design-patterns-in-expressjs
+[s]: https://itnext.io/a-new-and-better-mvc-pattern-for-node-express-478a95b09155
