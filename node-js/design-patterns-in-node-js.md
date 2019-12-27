@@ -539,6 +539,7 @@ app.engine('jade', require('jade').__express);
 //Select the strategy '.html'
 app.set('view engine', '.html');
 ```
+## 12. MVC pattern
 
 ## Referenced
 --------------------
@@ -555,3 +556,5 @@ app.set('view engine', '.html');
 [source]: http://expressjs.com/en/guide/using-middleware.html#using-middleware
 [source]: https://dzone.com/articles/design-patterns-in-expressjs
 [s]: https://itnext.io/a-new-and-better-mvc-pattern-for-node-express-478a95b09155
+[s]: https://dev.to/pacheco/designing-a-better-architecture-for-a-node-js-api-24d
+[s]: https://medium.com/@kalin.chernev/reflecting-on-node-js-design-patterns-6cc6eaa584
